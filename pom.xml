@@ -34,30 +34,30 @@
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>${graphql.spring.starter.version}</version>
+            <version>${graphql.version}</version>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>${graphql.spring.starter.version}</version>
+            <version>${graphql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>voyager-spring-boot-starter</artifactId>
-            <version>${graphql.spring.starter.version}</version>
+            <version>${graphql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>altair-spring-boot-starter</artifactId>
-            <version>${graphql.spring.starter.version}</version>
+            <version>${graphql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>playground-spring-boot-starter</artifactId>
-            <version>${graphql.spring.starter.version}</version>
+            <version>${graphql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -87,7 +87,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <graphql.spring.starter.version>11.1.0</graphql.spring.starter.version>
+        <graphql.version>11.1.0</graphql.version>
     </properties>
 
 </project>
