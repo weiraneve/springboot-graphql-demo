@@ -10,5 +10,5 @@ type Hero {
 }
 
 type Query {
-  getAllHeroes: [Hero]
+  getHeroesNotIsPick: Hero
 }

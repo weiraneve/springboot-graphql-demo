@@ -13,7 +13,7 @@ interface HeroRepository : JpaRepository<Hero, Int> {
     fun getHeroesByRule(line: Int): List<Hero>
 
     @Query("SELECT * FROM hero h WHERE h.is_pick = FALSE ORDER BY RAND() LIMIT 1", nativeQuery=true)
-    fun getHeroesNotIsPick(): List<Hero>
+    fun getHeroesNotIsPick(): Hero
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Transactional

@@ -10,5 +10,5 @@ class HeroQuery(
     private val heroRepository: HeroRepository
 ) : GraphQLQueryResolver {
 
-    fun getAllHeroes(): List<Hero> = heroRepository.getHeroesNotIsPick()
+    fun getHeroesNotIsPick(): Hero = heroRepository.getHeroesNotIsPick()
 }
