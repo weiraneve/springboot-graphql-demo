@@ -1,26 +1,14 @@
 schema {
   query: Query
-  mutation: Mutation
-  subscription: Subscription
 }
 
-type Vehicle {
-  id: ID!,
-  type: String,
-  modelCode: String,
-  brandName: String,
-  launchDate: String
+type Hero {
+  id: ID,
+  name: String!,
+  line: Int,
+  isPick: Boolean
 }
 
 type Query {
-  vehicles(count: Int):[Vehicle]
-  vehicle(id: ID):Vehicle
-}
-
-type Mutation {
-  createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
-}
-
-type Subscription {
-  getVehicleUpdate(id: ID):Vehicle
+  getAllHeroes: [Hero]
 }

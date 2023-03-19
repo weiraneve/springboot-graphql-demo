@@ -26,6 +26,15 @@ query {
     modelCode
 	}
 }
+
+query {
+  getAllHeroes
+  {
+    id, 
+    name, 
+    line
+	}
+}
 ```
 
 ```
