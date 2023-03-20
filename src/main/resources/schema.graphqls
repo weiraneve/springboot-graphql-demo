@@ -15,7 +15,7 @@ type Log {
   id: ID!,
   teamId: Int!,
   pickGroup: String!,
-  time: Date!
+  time: MyDate!
 }
 
 type Team {
@@ -23,10 +23,10 @@ type Team {
   encryptCode: String!,
   pickContent: String!,
   isPicked: Boolean!,
-  updateTime: Date!
+  updateTime: MyDate!
 }
 
-scalar Date
+scalar MyDate
 
 type Query {
   getHeroesNotIsPick: Hero

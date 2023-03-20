@@ -15,3 +15,7 @@ spring:
 graphql:
   servlet:
     mapping: /graphql
+  datetime:
+    scalars:
+      date:
+        scalar-name: MyDate
