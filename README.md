@@ -47,6 +47,18 @@ mutation {
 }
 ```
 
+```
+mutation {
+  clearOneTeam(id: 9)
+}
+```
+
+```
+mutation {
+  clearAllTeam
+}
+```
+
 - subscription graphql
 
 ```

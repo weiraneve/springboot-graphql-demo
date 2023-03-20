@@ -36,6 +36,8 @@ scalar Date
 
 type Mutation {
   clearAllHero: Int
+  clearOneTeam(id: ID!): Int
+  clearAllTeam: Int
 }
 
 type Subscription {
