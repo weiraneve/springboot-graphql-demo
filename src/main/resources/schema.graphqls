@@ -1,5 +1,6 @@
 schema {
   query: Query
+  mutation: Mutation
 }
 
 type Hero {
@@ -28,4 +29,10 @@ type Query {
   getHeroesNotIsPick: Hero
   getLogByTeamId(teamId: Int!): [Log]
   getTeamByEncryptCode(encryptCode: String!): Team
+}
+
+scalar Date
+
+type Mutation {
+  clearAllHero: Int
 }

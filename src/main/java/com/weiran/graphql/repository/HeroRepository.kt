@@ -18,6 +18,6 @@ interface HeroRepository : JpaRepository<Hero, Int> {
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Transactional
     @Query("UPDATE Hero SET isPick=false WHERE isPick=true ")
-    fun clearAllHero()
+    fun clearAllHero(): Int
 
 }

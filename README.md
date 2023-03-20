@@ -43,9 +43,9 @@ query {
 
 ```
 mutation {
-  createVehicle(type: "car", modelCode: "XYZ0192", brandName: "XYZ", launchDate: "2016-08-16") 
+  clearAllHero 
   {
-    id
+    
   }
 }
 ```
