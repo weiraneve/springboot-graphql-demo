@@ -3,12 +3,29 @@ schema {
 }
 
 type Hero {
-  id: ID,
+  id: ID!,
   name: String!,
-  line: Int,
-  isPick: Boolean
+  line: Int!,
+  isPick: Boolean!
+}
+
+type Log {
+  id: ID!,
+  teamId: Int!,
+  pickGroup: String!,
+  time: String!
+}
+
+type Team {
+  id: ID!,
+  encryptCode: String!,
+  pickContent: String!,
+  isPicked: Boolean!,
+  updateTime: String!
 }
 
 type Query {
   getHeroesNotIsPick: Hero
+  getLogByTeamId(teamId: Int!): [Log]
+  getTeamByEncryptCode(encryptCode: String!): Team
 }

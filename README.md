@@ -9,31 +9,44 @@
 请求接口为 `127.0.0.1/graphql`
 
 ```
-mutation {
-  createVehicle(type: "car", modelCode: "XYZ0192", brandName: "XYZ", launchDate: "2016-08-16") 
-  {
-    id
-  }
-}
-```
-
-```
 query {
-  vehicles(count: 1) 
-  {
-    id, 
-    type, 
-    modelCode
-	}
-}
-
-query {
-  getAllHeroes
+  getHeroesNotIsPick
   {
     id, 
     name, 
     line
 	}
+}
+
+query {
+  getLogByTeamId(teamId: 10) 
+  {
+    id,
+    teamId,
+    pickGroup,
+    time
+	}
+}
+
+query {
+  getTeamByEncryptCode(encryptCode: "asd") 
+  {
+    id,
+    encryptCode,
+    pickContent,
+    isPicked,
+    updateTime
+	}
+}
+
+```
+
+```
+mutation {
+  createVehicle(type: "car", modelCode: "XYZ0192", brandName: "XYZ", launchDate: "2016-08-16") 
+  {
+    id
+  }
 }
 ```
 

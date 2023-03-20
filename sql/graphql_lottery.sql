@@ -61,6 +61,12 @@ CREATE TABLE `log` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
+INSERT INTO `log` (team_id,pick_group,`time`)
+VALUES
+    ('9','[阿古朵][成吉思汗]or[沈梦溪][云中君]','2022-11-28 09:10:30'),
+    ('10','[扁鹊][梦奇]or[西施][牛魔]','2022-11-28 09:10:57'),
+    ('10','[戈娅][杨玉环]or[周瑜][白起]','2023-02-02 14:41:19');
+
 CREATE TABLE `team` (
   `id` int NOT NULL AUTO_INCREMENT,
   `encrypt_code` varchar(20) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '队伍秘钥',
@@ -70,3 +76,14 @@ CREATE TABLE `team` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
+INSERT INTO `team` (`id`, `encrypt_code`, `pick_content`, `is_picked`, `update_time`)
+VALUES
+    (1, 'apqmf1jk3n1mwe1', '', 0, '2022-11-18 00:00:00'),
+    (2, 'dyeqndasdiko121', '', 0, '2022-11-18 00:00:00'),
+    (3, 'sowuedasd99we1d', '', 0, '2022-11-18 00:00:00'),
+    (4, 'fqnxjs2131j4j12', '', 0, '2022-11-18 00:00:00'),
+    (5, 'gpdyeewa9das88d', '', 0, '2022-11-18 00:00:00'),
+    (6, 'hdmxb19dsc967vm', '', 0, '2022-11-18 00:00:00'),
+    (7, 'jdmejwfvusdn120', '', 0, '2022-11-18 00:00:00'),
+    (8, 'kejwuq908fvd87v', '', 0, '2022-11-18 00:00:00'),
+    (9, 'asd', '', 0, '2022-11-18 00:00:00');
