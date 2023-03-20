@@ -73,8 +73,8 @@ subscription {
 }
 ```
 
-json的query模板:`{"query": "{vehicles(count: 1){id,type,modelCode}}"}`
-
+- json的query模板:`{"query": "{vehicles(count: 1){id,type,modelCode}}"}`
+- graphql server端需要自定义一些属性端时候，可以使用`scalar` 标量，具体有两种方法。一种是直接在yml文件中引入官方的scalar自定义模版，另一种是自己写入一些scalar代码。
 
 ## 依赖调试工具
 

@@ -15,7 +15,7 @@ type Log {
   id: ID!,
   teamId: Int!,
   pickGroup: String!,
-  time: String!
+  time: Date!
 }
 
 type Team {
@@ -23,16 +23,16 @@ type Team {
   encryptCode: String!,
   pickContent: String!,
   isPicked: Boolean!,
-  updateTime: String!
+  updateTime: Date!
 }
+
+scalar Date
 
 type Query {
   getHeroesNotIsPick: Hero
   getLogByTeamId(teamId: Int!): [Log]
   getTeamByEncryptCode(encryptCode: String!): Team
 }
-
-scalar Date
 
 type Mutation {
   clearAllHero: Int
