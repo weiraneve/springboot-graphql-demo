@@ -1,10 +1,5 @@
-# 参考
-- [部分代码参考](https://github.com/gaohanghang/springboot-graphql)
-- [apollo-client sandbox官网](https://apollo-fullstack-tutorial.herokuapp.com/graphql)
-- [SpringBoot GraphQL Demo](https://github.com/Loading-Life/spring-graphql-demo)
-
 # 简介
-跑起来后，postman上用`graphql`模式调试。mutation和query分别如下模板。
+用kotlin Springboot 集成的graphql的demo，跑起来后，postman上用`graphql`模式调试。mutation和query分别如下模板。
 
 请求接口为 `127.0.0.1/graphql`
 
@@ -52,12 +47,7 @@ mutation {
 
 ```
 subscription {
-  getVehicleUpdate(id: 1) 
-  {
-    id, 
-    type, 
-    modelCode
-	}
+ xxxx
 }
 ```
 
