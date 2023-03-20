@@ -1,6 +1,7 @@
 schema {
   query: Query
   mutation: Mutation
+  subscription: Subscription
 }
 
 type Hero {
@@ -35,4 +36,8 @@ scalar Date
 
 type Mutation {
   clearAllHero: Int
+}
+
+type Subscription {
+  getHeroUpdate(id: ID!): Hero
 }

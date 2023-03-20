@@ -3,13 +3,16 @@
 
 请求接口为 `127.0.0.1/graphql`
 
+- query graphql
+
 ```
 query {
   getHeroesNotIsPick
   {
     id, 
     name, 
-    line
+    line,
+    isPick
 	}
 }
 
@@ -36,22 +39,32 @@ query {
 
 ```
 
+- mutation graphql
+
 ```
 mutation {
-  clearAllHero 
-  {
-    
+  clearAllHero
+}
+```
+
+- subscription graphql
+
+```
+subscription {
+  getHeroUpdate(id: 1)
+   {
+    id, 
+    name, 
+    line,
+    isPick
   }
 }
 ```
 
-```
-subscription {
- xxxx
-}
-```
-
 json的query模板:`{"query": "{vehicles(count: 1){id,type,modelCode}}"}`
+
+
+## 依赖调试工具
 
 - 调试工具GraphIQL ${address}/graphiql
 - 调试工具Voyager ${address}/voyager
