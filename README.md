@@ -1,5 +1,7 @@
 # 简介
-用kotlin Springboot 集成的graphql的demo，跑起来后，postman上用`graphql`模式调试。mutation和query分别如下模板。
+用kotlin Springboot 集成的graphql的demo，具体返回内容与我[另一后端项目](https://github.com/weiran1999/hok-lottery)相似
+
+跑起来后，postman上用`graphql`模式调试。mutation和query分别如下模板。
 
 请求接口为 `127.0.0.1/graphql`
 
