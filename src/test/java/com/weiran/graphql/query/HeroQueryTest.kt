@@ -25,11 +25,13 @@ class HeroQueryTest : AbstractGraphQLTest() {
     fun `get heroes not is pick`() {
         // given
         given(heroRepository.getHeroesNotIsPick()).willReturn(
-            Hero(
-                id = 1,
-                line = 1,
-                name = "hero",
-                isPick = false
+            listOf(
+                Hero(
+                    id = 1,
+                    line = 1,
+                    name = "hero",
+                    isPick = false
+                )
             )
         )
 
@@ -39,12 +41,14 @@ class HeroQueryTest : AbstractGraphQLTest() {
             {
             "data":
               { "getHeroesNotIsPick":
-                  {
-                    "id": "1",
-                    "line": 1,
-                    "name": "hero",
-                    isPick: false
-                  }
+                  [
+                      {
+                        "id": "1",
+                        "line": 1,
+                        "name": "hero",
+                        isPick: false
+                      }
+                  ]
               }
             }
             """

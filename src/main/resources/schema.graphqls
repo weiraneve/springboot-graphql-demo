@@ -26,10 +26,17 @@ type Team {
   updateTime: MyDate!
 }
 
+type MyResult {
+  teamId: Int,
+  data: String,
+  time: MyDate,
+#  logs:
+}
+
 scalar MyDate
 
 type Query {
-  getHeroesNotIsPick: Hero
+  getHeroesNotIsPick: [Hero]
   getLogByTeamId(teamId: Int!): [Log]
   getTeamByEncryptCode(encryptCode: String!): Team
 }
