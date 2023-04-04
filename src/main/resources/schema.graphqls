@@ -28,9 +28,19 @@ type Team {
 
 type MyResult {
   teamId: Int,
-  data: String,
-  time: MyDate,
-#  logs:
+  data: String!,
+  time: MyDate!,
+  logs: [LogResponse]
+}
+
+type LogResponse {
+  teamId: Int,
+  pickGroup: String!,
+  time: MyDate!
+}
+
+input PostParam {
+  encryptCode: String
 }
 
 scalar MyDate
@@ -39,6 +49,7 @@ type Query {
   getHeroesNotIsPick: [Hero]
   getLogByTeamId(teamId: Int!): [Log]
   getTeamByEncryptCode(encryptCode: String!): Team
+  pickHeroes(param: PostParam!): MyResult
 }
 
 type Mutation {

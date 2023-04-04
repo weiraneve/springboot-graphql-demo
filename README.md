@@ -38,7 +38,38 @@ query {
     updateTime
 	}
 }
+```
 
+复杂一些的 query 👇分别是postman中的graphql模式以及json模式
+```
+query ($param: PostParam!) {
+  pickHeroes(param: $param) 
+  {
+    teamId,
+    data,
+    time,
+    logs {
+        teamId,
+        pickGroup,
+        time
+    }
+	}
+}
+
+{
+    "param": {"encryptCode":"asd"}
+}
+```
+
+```
+{
+  "query": "query($param: PostParam!) { pickHeroes(param: $param) { teamId,data,time,logs{teamId,pickGroup,time} } }",
+  "variables": {
+    "param": {
+      "encryptCode": "asd"
+    }
+  }
+}
 ```
 
 - mutation graphql
